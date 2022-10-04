@@ -1,40 +1,48 @@
-# cfturnstile-vue3
+# Cloudflare Turnstile Widget Component for Vue 3
 
-This template should help get you started developing with Vue 3 in Vite.
+A Vue 3 component for showing the Cloudflare Turnstile widget on your project.
 
-## Recommended IDE Setup
+## What is Cloudflare Turnstile?
+Cloudflare Turnstile is a CAPTCHA alternative from Cloudflare. It uses PAT protocol to verify the user’s devices, preventing bots and malicious users from accessing your site and ensuring your and your visitors’ privacy is protected.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+[Introduction for Cloudflare Turnstile](https://blog.cloudflare.com/turnstile-private-captcha-alternative/)
 
-## Type Support for `.vue` Imports in TS
+## Installation & Usage
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```bash
+yarn add @astrianz/cfturnstile-vue3
+# or
+npm install @astrianz/cfturnstile-vue3
 ```
 
-### Compile and Hot-Reload for Development
+```vue
+<template>
+  <div id="app">
+    <cfturnstile
+      :sitekey="sitekey"
+      @verify="verify"
+    />
+  </div>
+</template>
+<script>
+import { defineComponent } from 'vue'
+import Turnstile from '@astrianz/cfturnstile-vue3'
 
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
+export default defineComponent({
+  name: 'App',
+  components: {
+    Turnstile
+  },
+  data() {
+    return {
+      sitekey: 'YOUR_SITE_KEY'
+    }
+  },
+  methods: {
+    verify(token) {
+      console.log(token)
+    }
+  }
+})
+</scirpt>
 ```
