@@ -1,6 +1,6 @@
 {
   "name": "@astrianz/cfturnstile-vue3",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "main": "./dist/cfturnstile-vue3.umd.js",
   "scripts": {
     "build": "vue-tsc --declaration --emitDeclarationOnly && vite build",
@@ -25,5 +25,10 @@
       "import": "./dist/cfturnstile-vue3.mjs",
       "require": "./dist/cfturnstile-vue3.umd.js"
     }
+  },
+  "homepage": "https://github.com/Astrian/cfturnstile-vue3",
+  "license" : "MIT",
+  "bugs": {
+    "url" : "https://github.com/Astrian/cfturnstile-vue3/issues"
   }
 }
