@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, onMounted, ref, defineProps, defineEmits } from 'vue'
+import { defineComponent, onMounted, ref } from 'vue'
 
 export default defineComponent({
   name: "TurnstileComponent",
