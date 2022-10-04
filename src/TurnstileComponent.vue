@@ -21,11 +21,11 @@ export default defineComponent({
     const turnstileBox = ref(null)
     onMounted(() => {
       if (window.turnstile === null || !window.turnstile) {
-          const script = document.createElement('script')
-          script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback'
-          script.async = true
-          script.defer = true
-          document.head.appendChild(script)
+        const script = document.createElement('script')
+        script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback'
+        script.async = true
+        script.defer = true
+        document.head.appendChild(script)
       }
       renderTurnstile()
     })
