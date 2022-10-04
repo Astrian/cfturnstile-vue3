@@ -1,13 +1,13 @@
 {
   "name": "cfturnstile-vue3",
   "version": "0.0.0",
+  "main": "./dist/vue3-friendly-captcha.umd.js",
   "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check build-only",
-    "preview": "vite preview --port 4173",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --noEmit"
+    "build": "vite build",
+    "prepublish": "npm run build"
   },
+  "typings": "./dist_types/index.d.ts",
+  "sideEffects": false,
   "dependencies": {
     "vue": "^3.2.38"
   },
@@ -19,5 +19,11 @@
     "typescript": "~4.7.4",
     "vite": "^3.0.9",
     "vue-tsc": "^0.40.7"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/vue3-recaptcha2.mjs",
+      "require": "./dist/cfturnstile-vue3.umd.js"
+    }
   }
 }
