@@ -1,7 +1,7 @@
 {
   "name": "cfturnstile-vue3",
   "version": "0.0.0",
-  "main": "./dist/vue3-friendly-captcha.umd.js",
+  "main": "./dist/cfturnstile-vue3.umd.js",
   "scripts": {
     "build": "vite build",
     "prepublish": "npm run build"
@@ -22,7 +22,7 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/vue3-recaptcha2.mjs",
+      "import": "./dist/cfturnstile-vue3.mjs",
       "require": "./dist/cfturnstile-vue3.umd.js"
     }
   }
