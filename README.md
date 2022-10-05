@@ -7,6 +7,16 @@ Cloudflare Turnstile is a CAPTCHA alternative from Cloudflare. It uses PAT proto
 
 [Introduction for Cloudflare Turnstile](https://blog.cloudflare.com/turnstile-private-captcha-alternative/)
 
+## Showcases
+
+### [Telegram Watchdog](https://github.com/tg-watchdog/tg-watchdog)
+
+*Telegram Watchdog* is a Telegram bot used for anti-abuse from Telegram group chats.
+
+![Screenshot for Telegram Watchdog](https://i.imgur.com/p593rwY.jpg)
+
+[Get into Telegram Watchdog community to give a try](https://t.me/tgwatchdog_chat)
+
 ## Installation & Usage
 
 ```bash
@@ -26,7 +36,7 @@ npm install cfturnstile-vue3
 </template>
 <script>
 import { defineComponent } from 'vue'
-import Turnstile from '@astrianz/cfturnstile-vue3'
+import Turnstile from 'cfturnstile-vue3'
 
 export default defineComponent({
   name: 'App',
