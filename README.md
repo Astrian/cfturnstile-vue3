@@ -13,7 +13,7 @@ Cloudflare Turnstile is a CAPTCHA alternative from Cloudflare. It uses PAT proto
 
 *Telegram Watchdog* is a Telegram bot used for anti-abuse from Telegram group chats.
 
-![Screenshot for Telegram Watchdog](https://i.imgur.com/p593rwY.jpg)
+<img src="https://i.imgur.com/p593rwY.jpg" width="300px"/>
 
 [Get into Telegram Watchdog community to give a try](https://t.me/tgwatchdog_chat)
 
