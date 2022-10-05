@@ -1,7 +1,11 @@
 {
-  "name": "cfturnstile-vue3",
+  "name": "@astrian/cfturnstile-vue3",
   "version": "1.0.0",
   "main": "./dist/cfturnstile-vue3.umd.js",
+  "repository": "https://github.com/Astrian/cf-turnstile-vue3",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "vue-tsc --declaration --emitDeclarationOnly && vite build",
     "prepare": "npm run build"
