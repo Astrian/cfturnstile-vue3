@@ -54,5 +54,5 @@ export default defineComponent({
     }
   }
 })
-</scirpt>
+</script>
 ```
