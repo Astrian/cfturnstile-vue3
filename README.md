@@ -26,33 +26,21 @@ npm install cfturnstile-vue3
 ```
 
 ```vue
-<template>
-  <div id="app">
-    <cfturnstile
-      :sitekey="sitekey"
-      @verify="verify"
-    />
-  </div>
-</template>
-<script>
-import { defineComponent } from 'vue'
+<script setup lang="ts">
 import Turnstile from 'cfturnstile-vue3'
-
-export default defineComponent({
-  name: 'App',
-  components: {
-    Turnstile
-  },
-  data() {
-    return {
-      sitekey: 'YOUR_SITE_KEY'
-    }
-  },
-  methods: {
-    verify(token) {
-      console.log(token)
-    }
-  }
-})
+const sitekey = import.meta.env.VITE_SITEKEY as string
 </script>
+
+<template>
+  <Turnstile 
+    :sitekey="sitekey"
+    @callback="e => console.log('success', e)"
+    size="compact"
+  />
+</template>
 ```
+
+Refer to [official document](https://developers.cloudflare.com/turnstile/get-started/client-side-rendering/#configurations) for all configurations.
+
+## Upgrade from v1.0.0
+We aligned the configuration parameters with the official widget document in version 2.0.0, which is disruptive for existing v1.0.0 users. Please remember to update the parameters to ensure that the widget works as normal.
