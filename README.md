@@ -28,11 +28,12 @@ npm install cfturnstile-vue3
 ```vue
 <script setup lang="ts">
 import Turnstile from 'cfturnstile-vue3'
+const sitekey = import.meta.env.VITE_SITEKEY as string
 </script>
 
 <template>
   <Turnstile 
-    sitekey="0x4AAAAAAAA8unmWcFmhPGDC"
+    :sitekey="sitekey"
     @callback="e => console.log('success', e)"
     size="compact"
   />
