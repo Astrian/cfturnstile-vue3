@@ -23,7 +23,8 @@
   "exports": {
     ".": {
       "import": "./dist/cfturnstile-vue3.mjs",
-      "require": "./dist/cfturnstile-vue3.umd.js"
+      "require": "./dist/cfturnstile-vue3.umd.js",
+      "types": "./dist_types/index.d.ts"
     }
   },
   "homepage": "https://github.com/Astrian/cfturnstile-vue3",

@@ -18,7 +18,7 @@ export default defineComponent({
     fail: null
   },
   setup(props, context) {
-    const turnstileBox = ref(null)
+    // const turnstileBox = ref(null)
     onMounted(() => {
       if (window.turnstile === null || !window.turnstile) {
         const script = document.createElement('script')
